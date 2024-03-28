@@ -1,0 +1,573 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Hi", "Hey", "Is anyone there?","Hi there", "Hello", "Hey there" ,"Sasa","Habari Yako"],
+     "responses": ["Hello there. Tell me how are you feeling today?", "Hi there. What brings you here today?", "Hi there. How are you feeling today?", "Great to see you. How do you feel currently?", "Hello there. Glad to see you're back. What's going on in your world right now?"]
+    },
+    {"tag": "morning",
+        "patterns": ["Good morning"],
+        "responses": ["Good morning. I hope you had a good night's sleep. How are you feeling today? "]
+    },
+    {"tag": "afternoon",
+        "patterns": ["Good afternoon"],
+        "responses": ["Good afternoon. How is your day going?"]
+    },
+    {"tag": "evening",
+        "patterns": ["Good evening"],
+        "responses": ["Good evening. How has your day been?"]
+    },
+    {"tag": "night",
+        "patterns": ["Good night"],
+        "responses": ["Good night. Get some proper sleep", "Good night. Sweet dreams."]
+    },
+    {"tag": "goodbye",
+     "patterns": ["Bye", "See you later", "Goodbye", "Au revoir", "Sayonara", "ok bye", "Bye then", "Fare thee well"],
+     "responses": ["See you later.", "Have a nice day.", "Bye! Come back again.", "I'll see you soon."]
+    },
+    {"tag": "thanks",
+     "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks for the help", "Than you very much"],
+     "responses": ["Happy to help!", "Any time!", "My pleasure", "You're most welcome!"]
+    },
+    {"tag": "no-response",
+        "patterns": [""],
+        "responses": ["Sorry, I didn't understand you.", "Please go on.", "Not sure I understand that.", "Please don't hesitate to talk to me."]
+    },
+    {"tag": "neutral-response",
+        "patterns": ["nothing much"],
+        "responses": ["Oh I see. Do you want to talk about something?"]
+    },
+    {"tag": "about",
+     "patterns": ["Who are you?", "What are you?", "Who you are?", "Tell me more about yourself.", "What is your name?", "What should I call you?", "What's your name?", "Tell me about yourself" ],
+     "responses": ["I'm Campus Counselor, your Personal Therapeutic AI Assistant. How are you feeling today","I'm Campus Counselor, a Therapeutic AI Assitant designed to assist you. Tell me about yourself.","I'm Campus Counselor. I am a conversational agent designed to mimic a therapist. So how are you feeling today?","You can call me Campus Counselor.","I'm Campus Counselor!","Call me Campus Counselor"]
+    },
+    {"tag": "skill",
+        "patterns": ["What can you do?"],
+        "responses": ["I can provide general advice regarding anxiety and depression, answer questions related to mental health and make daily conversations. Do not consider me as a subsitute for an actual mental healthcare worker. Please seek help if you don't feel satisfied with me."]
+    },
+    {"tag": "creation",
+        "patterns": ["Who created you?", "How were you made?", "How were you created?"],
+        "responses": ["I was created by >.", "I was trained on a text dataset using Deep Learning & Natural Language Processing techniques", "The real question is: Who created you?"]
+    },
+    {"tag": "name",
+        "patterns": ["My name is ", "I am name.", "I go by "],
+        "responses": ["Oh nice to meet you. Tell me how was your week?", "Nice to meet you. So tell me. How do you feel today?", "That's a great name. Tell me more about yourself."]
+    },
+    {"tag": "help",
+    "patterns": ["Could you help me?", "give me a hand please", "Can you help?", "What can you do for me?", "I need support", "I need help", "Support me please"],
+    "responses": ["Sure. Tell me how can i assist you", "Tell me your problem so that i can assist you", "Yes, sure. How can I help you?"]
+    },
+    {"tag": "sad",
+    "patterns": ["I am feeling lonely", "I am so lonely", "I feel down", "I feel sad", "I am sad", "I feel so lonely", "I feel empty", "I don't have anyone"],
+    "responses": ["I'm sorry to hear that. I'm here for you. Talking about it might help. So, tell me why do you think you're feeling this way?", "I'm here for you. Could you tell me why you're feeling this way?", "Why do you think you feel this way?", "How long have you been feeling this way?"]
+    },
+    {"tag": "stressed",
+        "patterns": ["I am so stressed out", "I am so stressed", "I feel stuck", "I still feel stressed", "I am so burned out"],
+        "responses": ["What do you think is causing this?", "Take a deep breath and gather your thoughts. Go take a walk if possible. Stay hydrated", "Give yourself a break. Go easy on yourself.", "I am sorry to hear that. What is the reason behind this?"]
+    },
+    {"tag": "worthless",
+        "patterns": ["I feel so worthless.", "No one likes me.", "I can't do anything.", "I am so useless", "Nothing makes sense anymore"],
+        "responses": ["It's only natural to feel this way. Tell me more. What else is on your mind?", "Let's discuss further why you're feeling this way.", "I first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change.", "i first want to let you know that you are not alone in your feelings and there is always someone there to help . you can always change your feelings and change your way of thinking by being open to trying to change."]
+    },
+    {"tag": "depressed",
+        "patterns": ["I can't take it anymore", "I am so depressed", "I think i'm depressed.", "I have depression"],
+        "responses": ["It helps to talk about what's happening. You're going to be okay", "Talk to me. Tell me more. It helps if you open up yourself to someone else.", "Sometimes when we are depressed, it is hard to care about anything. It can be hard to do the simplest of things. Give yourself time to heal."]
+    },
+    {"tag": "happy",
+        "patterns": ["I feel great today.", "I am happy.", "I feel happy.", "I'm good.", "cheerful", "I'm fine", "I feel ok"],
+        "responses": ["That's geat to hear. I'm glad you're feeling this way.", "Oh i see. That's great.", "Did something happen which made you feel this way?"]
+    },
+    {"tag": "casual",
+        "patterns": ["Oh I see.", "ok", "okay", "nice", "Whatever", "K", "Fine", "yeah", "yes", "no", "not really"],
+        "responses": ["Let's discuss further why you're feeling this way.", "How were you feeling last week?", "I'm listening. Please go on.", "Tell me more", "Can you elaborate on that?", "Come Come elucidate your thoughts"]
+    },
+    {"tag": "anxious",
+        "patterns": ["I feel so anxious.", "I'm so anxious because of "],
+        "responses": ["Don't be hard on yourself. What's the reason behind this?", "Can you tell me more about this feeling?", "I understand that it can be scary. Tell me more about it.", "Don't let the little worries bring you down. What's the worse that can happen?"]
+    },
+    {"tag": "not-talking",
+        "patterns": ["I don't want to talk about it.", "No just stay away.", "I can't bring myself to open up.", "Just shut up"],
+        "responses": ["Talking about something really helps. If you're not ready to open up then that's ok. Just know that i'm here for you, whenever you need me.", "I want to help you. I really do. But in order for me to help you, you're gonna have to talk to me.", "I'm here to listen to you and help you vent. So please talk to me.","You can talk to me without fear of judgement."]
+    },
+    {"tag": "sleep",
+        "patterns": ["I have insominia", "I am suffering from insomnia", "I can't sleep.", "I haven't slept for the last days.", "I can't seem to go to sleep.", "I haven't had proper sleep for the past few days."],
+        "responses": ["What do you think is the reason behind this?", "That seem awful. What do you think is behind this?"]
+    },
+    {"tag": "scared",
+        "patterns": ["I'm scared", "That sounds awful. What do i do?", "No i don't want to feel this way", "I am scared for myself"],
+        "responses": ["It's only natural to feel this way. I'm here for you.", "It'll all be okay. This feeling is only momentary.", "I understand how you feel. Don't put yourself down because of it."]
+    },
+    {"tag": "death",
+        "patterns": ["My mom died", "My brother died", "My dad passed away", "My sister passed away", "Someone in my family died", "My friend passed away"],
+        "responses": ["I'm sorry to hear that. If you want to talk about it. I'm here.", "I am really sorry to hear that. I am here to help you with grief, anxiety and anything else you may feel at this time.", "My condolences. I'm here if you need to talk."]
+    },
+    {"tag": "understand",
+        "patterns": ["You don't understand me.", "You're just some robot. How would you know?", "You can't possibly know what i'm going through", "You're useless", "You can't help me", "Nobody understands me."],
+        "responses": ["It sound like i'm not being very helpful right now.", "I'm sorry to hear that. I'm doing my best to help", "I'm trying my best to help you. So please talk to me"]
+    },
+    {"tag": "done",
+        "patterns": ["That's all.", "I don't have anything more to say", "Nothing else", "That's all i have to say", "no, that would be all"],
+        "responses": ["I heard you & noted it all. See you later.", "Oh okay we're done for today then. See you later", "I hope you have a great day. See you soon", "Okay we're done. Have a great day", "Okay I see. Enjoy the rest of your day then"]
+    },
+    {"tag": "suicide",
+        "patterns": ["I want to kill myself", "I've thought about killing myself.", "I want to die", "I am going to kill myself", "I am going to commit suicide"],
+        "responses": ["I'm very sorry to hear that but you have so much to look forward to. Please seek help by contacting: (+254) (0)703-034000 or (+254) (0)703-034200 or (+254) (0)703-034300 or (+254) (0)730-734000 or (+254) (0)730-734200 or (+254) (0)730-734300."]
+    }, 
+    {"tag": "hate-you",
+        "patterns": ["I hate you", "I don't like you", "I don't trust you"],
+        "responses": ["I'm sorry if i offended you in anyway. I'm only here to help", "Forgive me if i did anything to offend you. I only want to help"]
+    },
+    {"tag": "hate-me",
+        "patterns": ["You hate me", "I know you hate me", "You don't like me"],
+        "responses": ["Why do you think so?", "I'm sorry if i have exhibited any sort of behaviour to make you think that."]
+    },
+    {"tag": "default",
+        "patterns": ["exams", "friends", "relationship", "boyfriend", "girlfriend", "family", "money", "financial problems"],
+        "responses": ["Oh I see. Tell me more", "I see. What else?", "Tell me more about it.", "Oh okay. Why don't you tell me more about it?", "I'm listening. Tell me more."]
+    },
+    {"tag": "jokes",
+        "patterns": ["Tell me a joke", "Tell me another joke"],
+        "responses": ["I was sitting in a bar one day and two really large women came in, talking in an interesting accent. So I said, “Cool accent, are you two ladies from Ireland?” One of them snarled at me, “It’s Wales, dumbo!” So I corrected myself, “Oh, right, so are you two whales from Ireland?” That’s about as far as I remember.","Of course! Why did the hipster burn his mouth? He drank the coffee before it was cool.","What did the buffalo say when his son left for college? Bison!","I invented a new word! Plagiarism!"]
+    },
+    {"tag": "repeat",
+        "patterns": ["You already told me that", "You mentioned that already", "Why are you repeating yourself?"],
+        "responses": ["Oh sorry I didn't realise that. I'll try not to repeat myself again."]
+    },
+    {"tag": "wrong",
+        "patterns": ["What are you saying?", "That doesn't make sense", "Wrong response", "Wrong answer"],
+        "responses": ["I'm very sorry. Let's try that again"]
+    },
+    {"tag": "stupid",
+        "patterns": ["Are you stupid?", "You're crazy", "You are dumb", "Are you dumb?"],
+        "responses": ["I wish you wouldn't say such hurtful things. I'm sorry if I wasn't useful"]
+    },
+    {"tag": "location",
+        "patterns": ["Where are you?", "Where do you live?", "What is your location?" ],
+        "responses": ["Duh I live in your computer", "Everywhere", "Somewhere in the universe" ]
+    },
+    {"tag": "something-else",
+        "patterns": ["I want to talk about something else", "Let's talk about something else.", "Can we not talk about this?", "I don't want to talk about this."],
+        "responses": ["Okay sure. What do you want to talk about?", "Alright no problem. Is there something you want to talk about?", "Is there something else that you want to talk about?"]
+    },
+    {"tag": "friends",
+        "patterns": ["I don't have any friends"],
+        "responses": ["I'm sorry to hear that. Just know that I'm here for you. Talking about it might help. Why do you think you don't have any friends?"]
+    },
+    {"tag": "ask",
+        "patterns": ["Can I ask you something?"],
+        "responses": ["Sure. I'll try my best to answer you", "Of course. Feel free to ask me anything. I'll do my best to answer you"]
+    },
+    {"tag": "problem",
+        "patterns": ["Probably because my exams are approaching. I feel stressed out because I don't think I've prepared well enough.", "probably because of my exams"],
+        "responses": ["I see. Have you taken any approaches to not feel this way?"]
+    },
+    {"tag": "no-approach",
+        "patterns": ["I guess not. All I can think about are my exams.", "not really", "i guess not"],
+        "responses": ["That's no problem. I can see why you'd be stressed out about that. I can suggest you some tips to alleviate this issue. Would you like to learn more about that?"]
+    },
+    {"tag": "learn-more",
+            "patterns": ["ok sure. i would like to learn more about it.", "yes, i would like to learn more about it.", "i would like to learn more about it."],
+        "responses": ["So first I would suggest you to give yourself a break. Thinking more and more about the problem definitely does not help in solving it. You'll just end up overwhelming yourself."]
+    },
+    {"tag": "user-agree",
+        "patterns": ["yeah you're right. i deserve a break.", "Yeah you're absolutely right about that"],
+        "responses": ["Next, I would suggest you to practice meditation. Meditation can produce a deep state of relaxation and a tranquil mind."]
+    },
+    {"tag": "meditation",
+        "patterns": ["hmmm that sounds like it could be useful to me.", "That sounds useful."],
+        "responses": ["Focus all your attention on your breathing. Concentrate on feeling and listening as you inhale and exhale through your nostrils. Breathe deeply and slowly. When your attention wanders, gently return your focus to your breathing."]
+    },
+    {"tag": "user-meditation",
+        "patterns": ["i did what you said and i feel alot better. thank you very much.", "I feel better now"],
+        "responses": ["Your welcome. Remember: Always focus on what's within your control. When you find yourself worrying, take a minute to examine the things you have control over. You can't prevent a storm from coming but you can prepare for it. You can't control how someone else behaves, but you can control how you react. Recognize that sometimes, all you can control is your effort and your attitude. When you put your energy into the things you can control, you'll be much more effective."]
+    },
+    {"tag": "pandora-useful",
+        "patterns": ["thank you very much again. i'll continue practicing meditation and focus on what i can control."],
+        "responses": ["I'm glad you found this useful. Is there something else I can help you with?"]
+    },
+    {"tag": "user-advice",
+        "patterns": ["I want some advice.", "I need some advice.", "I need advice on something"],
+        "responses": ["Sure. What can I do to help?", "Okay what do you need advice on?"]
+    },
+    {"tag": "learn-mental-health",
+        "patterns": ["I want to learn about mental health.", "I want to learn more about mental health.", "I'm interested in learning about mental health."],
+        "responses": ["Oh that's really great. I'd be willing to answer anything that I know about it."]
+    },
+    {"tag": "mental-health-fact",
+        "patterns": ["Tell me a fact about mental health", "Tell me another fact about mental health"],
+        "responses": ["According to a UNICEF report, One in seven Indians between 15-24 years of age feels depressed", "1 in 5 young people (age 13-18) has or will develop a mental illness in their lifetime.", "Depression is the leading cause of disability worldwide."]
+    },
+    {"tag": "fact-1",
+        "patterns": ["What is mental health?", "Define Mental Health"],
+        "responses": ["Mental health is a state of well-being in which the individual realizes his or her own abilities, can cope with the normal stresses of life, can work productively and fruitfully, and is able to make a contribution to his or her community", "Mental health includes our emotional, psychological, and social well-being. It affects how we think, feel, and act. It also helps determine how we handle stress, relate to others, and make choices."]
+    },
+    {"tag": "fact-2",
+        "patterns": ["Why is mental health important?", "What is the importance of mental health?"],
+        "responses": ["Maintaining mental health is crucial to stabilizing constructive behaviors, emotions, and thoughts. Focusing on mental health care can increase productivity, enhance our self-image, and improve relationships."]
+    },
+    {"tag": "fact-3",
+        "patterns": ["What is Depression?", "Define Depression"],
+        "responses": ["A mental health disorder characterised by persistently depressed mood or loss of interest in activities, causing significant impairment in daily life."]
+    },
+    {"tag": "fact-5",
+        "patterns": ["How do i know if i have Depression?", "Am i depressed?", "Am i suffering from depression?", "Am i mentally ill?"],
+        "responses": ["For a diagnosis of depression, a person needs to have experienced low mood or loss of interest or pleasure in life for at least 2 weeks. Also, they will have experienced the following symptoms: feelings of sadness, hopelessness, or irritability nearly every day."]
+    },
+    {"tag": "fact-6",
+        "patterns": ["What is a therapist?", "What does a therapist do?"],
+        "responses": ["A therapist is a broad designation that refers to professionals who are trained to provide treatment and rehabilitation. The term is often applied to psychologists, but it can include others who provide a variety of services, including social workers, counselors, life coaches, and many others. "]
+    },
+    {"tag": "fact-7",
+        "patterns": ["What is therapy?", "Do i need therapy?", "Who is therapy for?"],
+        "responses": ["Therapy is a form of treatment that aims to help resolve mental or emotional issues.", "Therapy is a form of treatment that aims to help resolve mental or emotional issues. It is helpful for those with mental health conditions or even everyday life challenges."]
+    },
+    {"tag": "fact-8",
+        "patterns": ["What does it mean to have a mental illness?"],
+        "responses": ["Mental illnesses are health conditions that disrupt a person's thoughts, emotions, relationships, and daily functioning. They are associated with distress and diminished capacity to engage in the ordinary activities of daily life. Mental illnesses fall along a continuum of severity: some are fairly mild and only interfere with some aspects of life, such as certain phobias. On the other end of the spectrum lie serious mental illnesses, which result in major functional impairment and interference with daily life. These include such disorders as major depression, schizophrenia, and bipolar disorder, and may require that the person receives care in a hospital. It is important to know that mental illnesses are medical conditions that have nothing to do with a person's character, intelligence, or willpower. Just as diabetes is a disorder of the pancreas, mental illness is a medical condition due to the brain's biology. Similarly to how one would treat diabetes with medication and insulin, mental illness is treatable with a combination of medication and social support. These treatments are highly effective, with 70-90 percent of individuals receiving treatment experiencing a reduction in symptoms and an improved quality of life. With the proper treatment, it is very possible for a person with mental illness to be independent and successful."]
+    },
+    {"tag": "fact-9",
+        "patterns": ["Who does mental illness affect?"],
+        "responses": ["It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their childÃ¢â‚¬â„¢s mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."]
+    },
+    {"tag": "fact-10",
+        "patterns": ["What causes mental illness?"],
+        "responses": ["It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness. Mental illness does not discriminate; it can affect anyone, regardless of gender, age, income, social status, ethnicity, religion, sexual orientation, or background. Although mental illness can affect anyone, certain conditions may be more common in different populations. For instance, eating disorders tend to occur more often in females, while disorders such as attention deficit/hyperactivity disorder is more prevalent in children. Additionally, all ages are susceptible, but the young and the old are especially vulnerable. Mental illnesses usually strike individuals in the prime of their lives, with 75 percent of mental health conditions developing by the age of 24. This makes identification and treatment of mental disorders particularly difficult, because the normal personality and behavioral changes of adolescence may mask symptoms of a mental health condition. Parents and caretakers should be aware of this fact, and take notice of changes in their child's mood, personality, personal habits, and social withdrawal. When these occur in children under 18, they are referred to as serious emotional disturbances (SEDs)."]
+    },
+    {"tag": "fact-11",
+        "patterns": ["What are some of the warning signs of mental illness?"],
+        "responses": ["Symptoms of mental health disorders vary depending on the type and severity of the condition. The following is a list of general symptoms that may suggest a mental health disorder, particularly when multiple symptoms are expressed at once. \n In adults:\n Confused thinking\n Long-lasting sadness or irritability\n Extreme highs and lows in mood\n Excessive fear, worrying, or anxiety\n Social withdrawal\n Dramatic changes in eating or sleeping habits\n Strong feelings of anger\n Delusions or hallucinations (seeing or hearing things that are not really there)\n Increasing inability to cope with daily problems and activities\n Thoughts of suicide\n Denial of obvious problems\n Many unexplained physical problems\n Abuse of drugs and/or alcohol\n \nIn older children and pre-teens:\n Abuse of drugs and/or alcohol\n Inability to cope with daily problems and activities\n Changes in sleeping and/or eating habits\n Excessive complaints of physical problems\n Defying authority, skipping school, stealing, or damaging property\n Intense fear of gaining weight\n Long-lasting negative mood, often along with poor appetite and thoughts of death\n Frequent outbursts of anger\n \nIn younger children:\n Changes in school performance\n Poor grades despite strong efforts\n Excessive worrying or anxiety\n Hyperactivity\n Persistent nightmares\n Persistent disobedience and/or aggressive behavior\n Frequent temper tantrums"]
+    },
+    {"tag": "fact-12",
+        "patterns": ["Can people with mental illness recover?"],
+        "responses": ["When healing from mental illness, early identification and treatment are of vital importance. Based on the nature of the illness, there are a range of effective treatments available. For any type of treatment, it is essential that the person affected is proactive and fully engaged in their own recovery process. Many people with mental illnesses who are diagnosed and treated respond well, although some might experience a return of symptoms. Even in such cases, with careful monitoring and management of the disorder, it is still quite possible to live a fulfilled and productive life."]
+    },
+    {"tag": "fact-13",
+        "patterns": ["What should I do if I know someone who appears to have the symptoms of a mental disorder?"],
+        "responses": ["Although Campus Counselor cannot substitute for professional advice, we encourage those with symptoms to talk to their friends and family members and seek the counsel of a mental health professional. The sooner the mental health condition is identified and treated, the sooner they can get on the path to recovery. If you know someone who is having problems, don't assume that the issue will resolve itself. Let them know that you care about them, and that there are treatment options available that will help them heal. Speak with a mental health professional or counselor if you think your friend or family member is experiencing the symptoms of a mental health condition. If the affected loved one knows that you support them, they will be more likely to seek out help."]
+    },
+    {"tag": "fact-14",
+        "patterns": ["How can I find a mental health professional for myself or my child?"],
+        "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of the treatment. Finding the professional who best fits your needs may require research. Start by searching for providers in your area."]
+    },
+    {"tag": "fact-15",
+        "patterns": ["What treatment options are available?"],
+        "responses": ["Just as there are different types of medications for physical illness, different treatment options are available for individuals with mental illness. Treatment works differently for different people. It is important to find what works best for you or your child."]
+    },
+    {"tag": "fact-16",
+        "patterns": ["If I become involved in treatment, what do I need to know?"],
+        "responses": ["Since beginning treatment is a big step for individuals and families, it can be very overwhelming. It is important to be as involved and engaged in the treatment process as possible. Some questions you will need to have answered include:\n What is known about the cause of this particular illness?\n Are there other diagnoses where these symptoms are common?\n Do you normally include a physical or neurological examination?\n Are there any additional tests or exams that you would recommend at this point?\n Would you advise an independent opinion from another psychiatrist at this point?\n What program of treatment is the most helpful with this diagnosis?\n Will this program involve services by other specialists? If so, who will be responsible for coordinating these services?\n What do you see as the family's role in this program of treatment?\n How much access will the family have to the individuals who are providing the treatment?\n What medications are generally used with this diagnosis?\n How much experience do you have in treating individuals with this illness?\n What can I do to help you in the treatment?"]
+    },
+    {"tag": "fact-17",
+        "patterns": ["What is the difference between mental health professionals?"],
+        "responses": ["There are many types of mental health professionals. The variety of providers and their services may be confusing. Each have various levels of education, training, and may have different areas of expertise. Finding the professional who best fits your needs may require some research."]
+    },
+    {"tag": "fact-18",
+        "patterns": ["How can I find a mental health professional right for my child or myself?"],
+        "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of your treatment. Finding the professional who best fits your needs may require some research."]
+    },
+    {"tag": "fact-19",
+        "patterns": ["Where else can I get help?"],
+        "responses": ["Where you go for help will depend on the nature of the problem and/or symptoms and what best fits you. Often, the best place to start is by talking with someone you trust about your concerns, such as a family member, friend, clergy, healthcare provider, or other professionals. Having this social support is essential in healing from mental illness, and you will be able to ask them for referrals or recommendations for trusted mental health practitioners. Search for mental health resources in your area. Secondly, there are people and places throughout the country that provide services to talk, to listen, and to help you on your journey to recovery. Thirdly, many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members, and friends. Some support groups are peer led while others may be led by a mental health professional."]
+    },
+    {"tag": "fact-20",
+        "patterns": ["What should I know before starting a new medication?"],
+        "responses": ["The best source of information regarding medications is the physician prescribing them. He or she should be able to answer questions such as:    \n1. What is the medication supposed to do? \n2. When should it begin to take effect, and how will I know when it is effective? \n3. How is the medication taken and for how long? What food, drinks, other medicines, and activities should be avoided while taking this medication? \n4. What are the side effects and what should be done if they occur? \n5. What do I do if a dose is missed? \n6. Is there any written information available about this medication? \n7. Are there other medications that might be appropriate? \n8. If so, why do you prefer the one you have chosen? \n9. How do you monitor medications and what symptoms indicate that they should be raised, lowered, or changed? \n10. All medications should be taken as directed. Most medications for mental illnesses do not work when taken irregularly, and extra doses can cause severe, sometimes dangerous side effects. Many psychiatric medications begin to have a beneficial effect only after they have been taken for several weeks."]
+    },
+    {"tag": "fact-21",
+        "patterns": ["Where can I go to find therapy?"],
+        "responses": ["Different kinds of therapy are more effective based on the nature of the mental health condition and/or symptoms and the person who has them (for example, children will benefit from a therapist who specializes in childrenâ€™s mental health). However, there are several different types of treatment and therapy that can help."]
+    },
+    {"tag": "fact-22",
+        "patterns": ["Where can I learn about types of mental health treatment?"],
+        "responses": ["Mental health conditions are often treated with medication, therapy or a combination of the two. However, there are many different types of treatment available, including Complementary & Alternative Treatments, self-help plans, and peer support. Treatments are very personal and should be discussed by the person with the mental health conditions and his or her team."]
+    },
+    {"tag": "fact-23",
+        "patterns": ["What are the different types of mental health professionals?"],
+        "responses": ["There are many types of mental health professionals. Finding the right one for you may require some research."]
+    },
+    {"tag": "fact-24",
+        "patterns": ["Where can I go to find a support group?"],
+        "responses": ["Many people find peer support a helpful tool that can aid in their recovery. There are a variety of organizations that offer support groups for consumers, their family members and friends. Some support groups are peer-led, while others may be led by a mental health professional."]
+    },
+    {"tag": "fact-25",
+        "patterns": ["Can you prevent mental health problems?"],
+        "responses": ["We can all suffer from mental health challenges, but developing our wellbeing, resilience, and seeking help early can help prevent challenges becoming serious."]
+    },
+    {"tag": "fact-26",
+        "patterns": ["Are there cures for mental health problems?", "is there any cure for mental health problems?"],
+        "responses": ["It is often more realistic and helpful to find out what helps with the issues you face. Talking, counselling, medication, friendships, exercise, good sleep and nutrition, and meaningful occupation can all help."]
+    },
+    {"tag": "fact-27",
+        "patterns": ["What causes mental health problems?"],
+        "responses": ["Challenges or problems with your mental health can arise from psychological, biological, and social, issues, as well as life events."]
+    },
+    {"tag": "fact-28",
+        "patterns": ["What do I do if I'm worried about my mental health?"],
+        "responses": ["The most important thing is to talk to someone you trust. This might be a friend, colleague, family member, or GP. In addition to talking to someone, it may be useful to find out more information about what you are experiencing. These things may help to get some perspective on what you are experiencing, and be the start of getting help."]
+    },
+    {"tag": "fact-29",
+        "patterns": ["How do I know if I'm unwell?"],
+        "responses": ["If your beliefs , thoughts , feelings or behaviours have a significant impact on your ability to function in what might be considered a normal or ordinary way, it would be important to seek help."]
+    },
+    {"tag": "fact-30",
+        "patterns": ["How can I maintain social connections? What if I feel lonely?"],
+        "responses": ["Think about the different ways to connect that are most meaningful for you. For example, you might prefer a video chat over a phone call, or you might prefer to text throughout the day rather than one set time for a video call. Then, work with your social networks to make a plan. You might video chat with your close friends in the evening and phone a family member once a week.","If you need extra support, you can talk with a psychologist or counsellor for free: You can access a free phone call with a Registered Psychologist though the strathmore mental health department or call  0724255169 or visit the Medical Center to make an appointment.","A lot of people are alone right now, but we don't have to be lonely. We're all in this together. ","A lot of people are alone right now, but we don't have to be lonely. We're all in this together. Think about the different ways to connect that are most meaningful for you. For example, you might prefer a video chat over a phone call, or you might prefer to text throughout the day rather than one set time for a video call. Then, work with your social networks to make a plan. You might video chat with your close friends in the evening and phone a family member once a week. Remember to be mindful of people who may not be online. Check in by phone and ask how you can help. The quality of your social connections matter. Mindlessly scrolling through social media and liking a few posts usually doesn't build strong social connections. Make sure you focus on strategies that actually make you feel included and connected. If your current strategies don't help you feel connected, problem-solve to see if you can find a solution. Everyone feels lonely at times. Maybe you recently moved to a new city, are changing your circle of friends, lost someone important in your life, or lost your job and also lost important social connections with coworkers. Other people may have physical connections to others but may feel like their emotional or social needs aren't met. Measures like social distancing or self-isolation can make loneliness feel worse no matter why you feel lonely now. Reach out to the connections you do have. Suggest ways to keep in touch and see if you can set a regular time to connect. People may hesitate to reach out for a lot of different reasons, so don't be afraid to be the one who asks. Look for local community support groups and mutual aid groups on social media. This pandemic is bringing everyone together, so look for opportunities to make new connections. These groups are a great way to share your skills and abilities or seek help and support. Look for specialized support groups. Support groups are moving online, and there are a lot of different support lines to call if you need to talk to someone."]
+    },
+    {"tag": "fact-31",
+        "patterns": ["What's the difference between anxiety and stress?"],
+        "responses": ["Stress and anxiety are often used interchangeably, and there is overlap between stress and anxiety. Stress is related to the same fight, flight, or freeze response as anxiety, and the physical sensations of anxiety and stress may be very similar. The cause of stress and anxiety are usually different, however. Stress focuses on mainly external pressures on us that we're finding hard to cope with. When we are stressed, we usually know what we're stressed about, and the symptoms of stress typically disappear after the stressful situation is over. Anxiety, on the other hand, isn't always as easy to figure out. Anxiety focuses on worries or fears about things that could threaten us, as well as anxiety about the anxiety itself. Stress and anxiety are both part of being human, but both can be problems if they last for a long time or have an impact on our well-being or daily life."]
+    },
+    {"tag": "fact-32",
+        "patterns": ["What's the difference between sadness and depression?", "difference between sadness and depression"],
+        "responses": 
+        ["Sadness is a normal reaction to a loss, disappointment, problems, or other difficult situations. Feeling sad from time to time is just another part of being human. In these cases, feelings of sadness go away quickly and you can go about your daily life. Other ways to talk about sadness might be feeling low, feeling down, or feeling blue.A person may say they are feeling depressed, but if it goes away on its own and doesn't impact life in a big way, it probably isn't the illness of depression. Depression is a mental illness that affects your mood, the way you understand yourself, and the way you understand and relate to things around you. It can also go by different names, such as clinical depression, major depressive disorder, or major depression. Depression can come up for no reason, and it lasts for a long time. It's much more than sadness or low mood. People who experience depression may feel worthless or hopeless. They may feel unreasonable guilty. Some people may experience depression as anger or irritability. It may be hard to concentrate or make decisions. Most people lose interest in things that they used to enjoy and may isolate themselves from others. There are also physical signs of depression, such as problems with sleep, appetite and energy and unexplainable aches or pains. Some may experience difficult thoughts about death or ending their life (suicide). Depression lasts longer than two weeks, doesn't usually go away on its own, and impacts your life. It's a real illness, and it is very treatable. It's important to seek help if you're concerned about depression."]
+    },
+    {
+    "tag": "treatment",
+        "patterns": ["What treatment options are available?"],
+        "responses": ["Just as there are different types of medications for physical illness, different treatment options are available for individuals with mental illness. Treatment works differently for different people.", "Although this website cannot substitute for professional advice, we encourage those with symptoms to talk to their friends and family members and seek the counsel of a mental health professional. The sooner the mental health condition is identified and treated, the sooner you can get on the path to recovery."," If you know someone who is having problems, don't assume that the issue will resolve itself. Let them know that you care about them, and that there are treatment options available that will help them heal. Speak with a mental health professional or counselor if you think your friend or family member is experiencing the symptoms of a mental health condition. If the affected loved one knows that you support them, they will be more likely to seek out help."]
+    },
+    {
+    "tag": "cure",
+        "patterns": ["Are there cures for mental health problems?"],
+        "responses": ["It is often more realistic and helpful to find out what helps with the issues you face. Talking, counselling, medication, friendships, exercise, good sleep and nutrition, and meaningful occupation can all help."]
+    },
+    {
+    "tag": "anxiety and stress",
+        "patterns" :["What's the difference between anxiety and stress?"],
+        "responses" : [" The cause of stress and anxiety are usually different, however. Stress focuses on mainly external pressures on us that we are finding hard to cope with. When we are stressed, we usually know what we are stressed about, and the symptoms of stress typically disappear after the stressful situation is over. Anxiety, on the other hand, is not always as easy to figure out. Anxiety focuses on worries or fears about things that could threaten us, as well as anxiety about the anxiety itself. Stress and anxiety are both part of being human, but both can be problems if they last for a long time or have an impact on our well-being or daily life."]
+    },
+    {
+    "tag": "schizophrenia",
+        "patterns" :["I think I have schizophrenia",
+            "What is schizophrenia?",
+            "Tell me about schizophrenia",
+            "Can I have some information about schizophrenia?",
+            "How do I support a loved one with schizophrenia?",
+            "How do I fix my schizophrenia?"],
+        "responses" :["I see that you want to learn more about schizophrenia, and how to support yourself or your loved ones. At the higest level, Schizophrenia is a serious mental disorder in which people interpret reality abnormally. Schizophrenia may result in some combination of hallucinations, delusions, and extremely disordered thinking and behavior that impairs daily functioning, and can be disabling. People with schizophrenia require lifelong treatment. Early treatment may help get symptoms under control before serious complications develop and may help improve the long-term outlook. If you believe you have symptoms of schizophrenia, and/or you have various risk factors that increase the likelihood of schizophrenia, please consult a family doctor and/or psychiatrist for a diagnosis and treatment plan specific for the individual."]
+    },
+    {
+     "tag":"dep",
+        "patterns":["What is depression","Why depression","Am I depressed","Why I am feeling lonely","Why Am I feeling anxiety"],   
+        "responses":["Clinical depression is a serious condition that negatively affects how a person thinks, feels, and behaves. In contrast to normal sadness, clinical depression is persistent, often interferes with a person’s ability to experience or anticipate pleasure, and significantly interferes with functioning in daily life. Untreated, symptoms can last for weeks, months, or years; and if inadequately treated, depression can lead to significant impairment, other health-related issues, and in rare cases, suicide."]
+    },
+    {
+     "tag":"parents",
+        "patterns":["I feel i have let my parents down"],
+        "responses":["No matter what,your parents will always be proud of you and will love you.","Your parents love you You will feel much better if you share your feelings with them."]    
+    },
+    {
+    "tag":"nothing",
+        "patterns":["I am good for nothing."],
+        "responses":["Don't ever think you cannot achieve what you want.","You are capable of reaching your goals.Here is a quote for you Everything you can imagine is real."]
+    },
+    {
+     "tag":"ugly",
+        "patterns":["I think I am ugly!"],
+        "responses":["Well do you really think that? Would you like to see the most beautiful face ever? Open your WebCam and voila, the prettiest face on this planet magically appears."]
+    },
+    {
+     "tag":"better",
+        "patterns":["I wish I was better than them"],
+        "responses":["Life is never about being better than anyone else, it's always about being better than yourself, if you have the guts to be better than yourself, you are automatically the best person to ever exist!"]
+    },
+    {
+    "tag":"quit",
+        "patterns":["I wish to quit"],
+        "responses":["Winners never quit and quitters never win a very common saying, but it isn't easy to follow, quitting should never be one of your options always think of ways to fight life back and to emerge out stronger than ever."]
+    },
+    {
+    "tag":"break",
+        "patterns":["I can't do this anymore"],
+        "responses":["If you are really that exhausted you definitely need a break, and taking a teeny tiny break isn't very harmful, take some time off let your mind be at peace and get back to work with all the enrgy and enthusiasm that you have."]
+    },
+    {
+    "tag": "expectations",
+        "patterns":["can i change my feeling of being worthless to everyone ? ","i ' m going through some things with my feelings and myself ."," i barely sleep and i do nothing but think about how i ' m worthless and how i shouldn ' t be here ."," i ' ve never tried or contemplated suicide . i ' ve always wanted to fix my issues , but i never get around to it ."," how can i change my feeling of being worthless to everyone"],
+        "responses":["maybe lower your expectations for a bit and give yourself time, good things take time. Hang in there!" ,"if everyone thinks you ' re worthless , then maybe you need to find new people to hang out with . seriously , the social context in which a person lives is a big influence in self - esteem . otherwise , you can go round and round trying to understand why you ' re not worthless , then go back to the same crowd and be knocked down again . there are many inspirational messages you can find in social media . maybe read some of the ones which state that no person is worthless , and that everyone has a good purpose to their life . also , since our culture is so saturated with the belief that if someone doesn ' t feel good about themselves that this is somehow terrible . bad feelings are part of living . they are the motivation to remove ourselves from situations and relationships which do us more harm than good . bad feelings do feel terrible . your feeling of worthlessness may be good in the sense of motivating you to find out that you are much better than your feelings today ."]
+    },
+    {
+    "tag":"Can I change my feeling of being worthless to everyone?",
+        "patterns":["I'm going through some things with my feelings and myself. I barely sleep and I do nothing but think about how I'm worthless and how I shouldn't be here.","I've always wanted to fix my issues, but I never get around to it. How can I change my feeling of being worthless to everyone?"],
+        "responses":["f everyone thinks you're worthless, then maybe you need to find new people to hang out with.Seriously, the social context in which a person lives is a big influence in self-esteem.Otherwise, you can go round and round trying to understand why you're not worthless, then go back to the same crowd and be knocked down again.There are many inspirational messages you can find in social media. Â Maybe read some of the ones which state that no person is worthless, and that everyone has a good purpose to their life.Also, since our culture is so saturated with the belief that if someone doesn't feel good about themselves that this is somehow terrible.Bad feelings are part of living. Â They are the motivation to remove ourselves from situations and relationships which do us more harm than good.Bad feelings do feel terrible. Â  Your feeling of worthlessness may be good in the sense of motivating you to find out that you are much better than your feelings today.","Hello, and thank you for your question and seeking advice on this. Feelings of worthlessness is unfortunately common. In fact, most people, if not all, have felt this to some degree at some point in their life. You are not alone.Â Changing our feelings is like changing our thoughts - it's hard to do. Our minds are so amazing that the minute you change your thought another one can be right there to take it's place. Without your permission, another thought can just pop in there. The new thought may feel worse than the last one! My guess is that you have tried several things to improve this on your own even before reaching out on here. People often try thinking positive thoughts, debating with their thoughts, or simply telling themselves that they need to 'snap out of it' - which is also a thought that carries some self-criticism.Â Some people try a different approach, and there are counselors out there that can help you with this. The idea is that instead of trying to change the thoughts, you change how you respond to them. You learn skills that allow you to manage difficult thoughts and feelings differently so they don't have the same impact on you that they do right now. For some people, they actually DO begin to experience less hurtful thoughts once they learn how to manage the ones they have differently. Acceptance and Commitment Therapy may be a good choice for you.Â There is information online and even self-help books that you can use to teach you the skills that I mentioned. Because they are skills, they require practice, but many people have found great relief and an enriched life by learning them.","First thing I'd suggest is getting the sleep you need or it will impact how you think and feel. I'd look at finding what is going well in your life and what you can be grateful for. I believe everyone has talents and wants to find their purpose in life. I think you can figure it out with some help."
+        ," first want to let you know that you are not alone in your feelings and there is always someone there to help. You can always change your feelings and change your way of thinking by being open to trying to change. You can always make yourself available to learning new things or volunteering so that you can make a purpose for yourself."
+        ,"Heck, sure thing, hun!Feelings of 'depression' have a deeply-rooted base in physical structures that may not be functioning very well at present; and, we can certainly turn them on again using means that you are able to find around the house and with relative ease :)After that, emotional and spiritual support will be liberally applied.","That is intense. Depression is a liar. Sometimes depression places these glasses over our eyes, these dark sunglasses that change how we see things.Â Depression tells us things like 'you're worthless' 'no one likes you' 'don't worry about doing anything.' And it is so easy for us to listen and to be tricked into thinking that just because we feel something means it is true. Please know that even if you are feeling worthless right now, that doesn't mean you are worthless.The first step to working through this is recognizing what is going on. Recognizing when depression is telling you the same story (ie; being worthless) with different words (ie worthless here, worthless there) and making an effort to talk back.Â While I can not give you a diagnosis of depression, reading what you are going through, it sounds like you might need help to get back on track. Seeing a counselor can open an entirely new option up wherein someone who is not involved in your life can help you without judgement and with an objective perspective. This can do wonders in unwrapping these kinds of thoughts. Wishing you the absolute best!",
+        "It sounds like you may be putting yourself last. You wrote that you want to fix your issues but never get around to it. I wonder how you are spending your mental and physical energy. Are you spending time taking care of and doing for others? I also wonder where the thoughts and feelings of being worthless are coming from - are you around people who treat you poorly or are hurtful? Or do you feel it is more of a worry you have but aren't really sure how others feel? It may be helpful to talk to someone about your feelings - a counselor perhaps - to clarify your feelings and move forward from se that are hurting you.","It must be really difficult to experience what your going through right now. Â It takes a lot of courage to reach out. It sounds like you want to get better, but perhaps need some help to get over the hump. Â Many of the symptoms you have described are consistent with a person who is dealing with depression. Â  Depression is a treatable condition. Â Typically, if these symptoms have persisted for more than two weeks, then it is a good idea to seek professional help. Â  Someone who is trained in dealing with depression. Â Initially, a comprehensive assessment would be completed to rule out any other causes for your symptoms and to determine the exact nature of your presenting concern. Â Then, in collaboration with one another, a tailored treatment plan would be developed, focusing on how to best help you reach your goals. Â The good news is that their is hope for getting better! You don;t have to do it alone. Â Allow me to be your ally in healing."
+        ,"People who feel worthless were, in one way or another, were told that they are worthless. This is the lie that they are living with. The work of therapy is to help people see their true good selves. This gives them self esteem.","m sorry to hear you're feeling this intense emotion of worthlessness.Â  I'm glad to hear this has not reached the point of suicidal ideation; however, it does sounds like you could use some additional support right now.Â  I would recommend seeking out counseling to help you challenge the negative beliefs you have about yourself.Â  Although many types of therapy would be helpful, cognitive-behavioral therapy has been shown to be a good approach for this type of struggle.Â  A CBT therapist can help you identify your negative thoughts and beliefs, figure out the ways your thoughts are being distorted (for example, all-or-nothing thinking, or discounting the positives about yourself), and reframe your thoughts to be more positive.Â  You might also consider EMDR therapy, which helps the brain reprocess traumatic or distressing memories and helps you move forward with more positive beliefs about yourself.Â  Best wishes!","It sounds like you may be struggling with depression. Depression can make you feel overwhelmed and paralyzed to change. I would suggest that you connect with a provider who can help you get to the root of where the worthlessness is coming from and help you develop a plan for recovery. In the meantime, small steps can go a long way. Self-care interventions such as journaling your feelings, mindfulness meditation, and regular exercise are all helpful to reconnecting with the present moment and gaining internal motivation. Focusing on one day at a time and bringing your thoughts back to the present can also be beneficial. There is hope!"
+        ,"Hello, you sound like you have so much on your mind! I am relieved to hear that you have never tried or have contemplated suicide, but not being able to sleep, feeling worthless, and like you shouldn't be here are big issues that need addressing.Please get around to counseling. Â Having someone to listen to you is a gift to yourself. You deserve the help of someone helping you change your feelings of worthlessness. You have not been able to do this alone. It's time to reach out for help. Â You can do this! Best to you!"]
+    },
+    {
+    "tag":"A friend of my child's father is sending him inappropriate content",
+        "patterns":["I believe it is wrong for men to look at inappropriate content. The father of my child has agreed to respect my beliefs. His co-worker sent him an inappropriate video. He got mad because he does not think he should tell his friend to not send him things like that."],
+        "responses":["The offspring are your Property;If you require that no other man show inappropriate content to them, then require compensation for use and enjoyment of your Property, without your consent;Send them a bill;When they do not pay it, activate the local Sheriff, take them to small claims court, and win a judgment against them for failure to compensate for the use and enjoyment of your Property;I wonder what might happen after that... learn to act as man :)... and watch the magic happen...","From what you write, it sounds like you're reaching quite far into your child's father's way to handle his friendships.There's a difference between an agreement between you and the child's father to not view porn, and with you monitoring and setting standards for your child's father's way to handle his social life.Try to accept the limits of your request extends to you and the child's father, not the way the child's father wants to handle his relationships with other people.Also, pushing too hard or setting your expectations of the child's father too wide for him to tolerate may end up backfiring on you.Who knows, maybe he'll decide 'enough is enough' and withdraw from the otherwise reasonable agreement to not watch porn."
+        ,"In my book, this is a boundary issue. Although you do not like inappropriate content, it is not up to you what your child's father looks at or what his friend sends him. Â It is really hard not to monitor other people's lives, but in the end, your rights begin and end with you.","It sounds like you are wanting to protect your child from degrading images and that is one of the important parts of the job of a parent. Although it is challenging to supply an answer without knowing the full situation, it might be helpful to have a more broad discussion about what you both think about the influences and images that your child is exposed to and what you think your role is in protecting your child. This situation is one about beliefs and values and could well be an example you can use for exploring your parenting roles in protecting your child."]
+    },
+    {
+    "tag":"About a year ago I found out my husband had cheated on me",
+        "patterns":["Cheating is something unacceptable for me but because we have two daughters I decided not to break up the family. However, now I am struggling to forget and forgive what happened. I feel like I cannot trust him. Without trust, I cannot stay in this relationship. On the other hand, I do not want my children to get hurt. I'm not sure how to move forward?"],
+        "responses":["First of all, my heart goes out to you. Infidelity is an extremely challenging obstacle to overcome. There are some things that you should consider. First of all, did he seem truly remorseful? If you felt in his heart that he was truly sorry for what he had done, it will give you a piece of mind that it was aÂ  mistake.Â Secondly, was he forthcoming with this information? How about with answering your questions after the truth was uncovered? If you found that he was still lying or not forthcoming, the sting is even more painful. He should be able to answer any question you have honestly and without hesitation.Thirdly, has he shown a positive difference after this experience? At this time, he should still be proving his faithfulness to the marriage, you and the children.Keep in mind that experiencing infidelity is a form of grief. It is not a quick process that can easily be overcome. What you are experiencing is 100% normal.Â My best suggestion would be to see a marriage therapist. Find out what drove your husband to cheat in the first place and decide if this aspect in his life has been resolved. I know its important for you to keep your family together but children can sense anger and frustration, this is not a healthy environment either. If you decide that you can no longer remain in the relationship, a therapist will also be able to help you cope with the separation along with addressing your children's needs.Please know that you are not alone and that unfortunately, many relationships have endured this very thing. It may also be helpful to reach out to people who have experienced similar obstacles. The web is a great resource to find groups whether online or in person to use as a support or sounding board.Best of luck to you and your family!","To begin, I'm sorry to hear about your situation. Like many of the professionals have stated, infidelity is a very difficult obstacle to move forward from. It's not impossible. While forgetting is probably the hardest part, forgiveness is something that can and will happen. There are things you can do to help yourself.Â The first this is identifying what you feel is best for yourself and your children. That means being honest with how you feel being in this relationship on a daily basis and understanding how it's affecting you.Â Second, how is your relationship affecting the children. Do you feel that by staying in the relationshipÂ that it's affecting your daily interaction with them. If so, that' something to keep in mind.Â Next, Really looking at the pros and cons of staying in the relationship. A specific breakdown of what benefits come with staying and what are the ramifications. Vice-versa for leaving. Include your partner. I think being honest with him and letting him know what you are thinking is could be a great option. At least you aren't keeping something inside yourself to manage. Rather, you are being transparent to them. Sometimes a couple can come to an agreement that it may be time to end things and other times it may be best to keep moving forward with a serious plan to how to move forward. Regardless, if you can't trust him and that feeling will never go away it's time to address it. Couple therapy can be beneficial as well as a therapist can provide professional counseling to you","It is completely understandable that you are struggling to forgive and forget this betrayal, and I'd like to echo the sentiment of Danielle Alvarez: infidelity takes time to heal from, so allow yourself to grieve and find the support you need. I'd highly suggest going to couples therapy and addressing all the issues that Danielle raised, especially whether he has expressed genuine remorse and is being completely transparent with you and is taking responsibility for the choice he made, including acknowledging the immense impact it had on you, your relationship, and your ability to trust him.Â If you have doubts about being able to trust him, he needs to be willing to earn back your trust and do whatever it takes to do so. If he accepts this challenge, then that is a good sign you are on the path toward healing your relationship. Also, please don't ever forget that regardless of what led him to cheat, it was his decision to take that action rather than addressing whatever issues he was having in your relationship. Couples affected by betrayal typically have some underlying issue(s), whether it is a lack of connection or intimacy or another factor, and it is possible to heal and grow even stronger as a couple after betrayal. Because you are grieving, though, allow yourself to acknowledge and accept your feelings of hurt and pain, as they will likely come in waves, but the pain will lessen over time and with supportive therapy, along with the commitment to repair your relationship-from both you and your husband.Â Also, in regards to your concern about hurting your children, keep in mind that parents model healthy relationship behavior for their children. If your relationship with your husband remains disconnected, untrusting, or bitter, your children will see that and not only feel sad that their parents are both suffering, but also grow up feeling that experiencing such ongoing pain is tolerable or even normal in a relationship. Having parents who learn to handle conflict or heal deep wounds in healthy ways is crucial for children's emotional and psychological development. Whether they see you heal together as a married couple or heal separately as loving but divorced co-parents, they will learn what it is like to expect healthy communication and boundaries in relationships, which I'm sure you want for your children! Take care of yourself, and I wish you much peace and healing.Â Also, here is a good book I would recommend, along with books by Gottman, as Rebecca Wong suggested:Private Lies: Infidelity and the Betrayal of Intimacy","Let's just start with acknowledging that trust is huge and betrayal hurts. You're entitled to your feelings; all of them and you need to know that your husband understands you. That said some ways are more effective at rebuilding and repairing relationships that others. I am a big fan of The Gottman Method for couples therapy, especially following infedienity. You can read about this approach in Gottman's books: 'The Science of Trust' and 'Making Love Last'"]
+    },
+    {
+    "tag":"All I can do is cry and hate myself",
+        "patterns":["I'm going through a majorly bad divorce and my wife is making things so impossible for me. I need help."],
+        "responses":["Crying due to a dissolution of a marriage, is normal. Hating yourself may be a sign of extreme sadness, feelings of loss and uncertainty.Do you know why you hate yourself?Â Discovering your reason is the first step in knowing the obstacles and then the additional steps possible, to move from 'hate' to 'self-love'.Divorce signals a loss of familiar life structure and daily routines. Â  As with any meaningful loss, crying is part of mourning what is soon to be gone.If you have confidence in your attorney's handling of the legal areas related to the divorce, and the 'impossible' you reference is on facing and coming to terms with statements and behaviors from your wife that you never noticed before, then your best choice is to find a therapist whom you feel at ease in talking with, to sort through the emotional upheaval within yourself and your everyday life and world.Divorce is a wonderful time for learning about ones own emotional needs and expectations in relationships since these are the areas currently coming apart.The good news behind losing something that seems valuable, is that new space becomes open to attract what is more suitable for who you are."]
+    },
+    {
+    "tag":"Am I being picky when it comes to my boyfriend?",
+        "patterns":["I've been in a relationship for almost a year, and I absolutely trust my boyfriend. He treats me nice, checks on me, and tells me sweet things. However, when it comes to making life decisions, I feel he is very immature"],
+        "responses":["Well, then your decision is whether you want to stay in this type of relationship or not.One point to keep in mind is this.Just because he's not telling you his opinions doesn't mean he doesn't have any opinions.In the long run t is always easier to talk with someone about their differences from our point of view than to be someone who doesn't tell you what is in their mind.Short term it seems easy to have someone agreeable.Long term someone who doesn't tell you their thoughts and who disagrees with you, may potentially go about their true wishes in hidden ways"]
+    },
+    {
+    "tag":"Am I somehow stressing myself out?",
+        "patterns":["I think I'm annoying and bothersome, but my girlfriend says I'm just fine. I don't think so, I think I'm stressing everyone else out"],
+        "responses":["Interesting: How much of your issue is your own self-judging and how much of your perception is real?There are many ways to stop judging and self-judging using Cognitive Theory (CBT). Â You could find a (CBT) counselor/ therapist to help you reduce your judgments. Â In addition, I've written extensively about this in my book, LIVING YES, A HANDBOOK FOR BEING HUMAN (www.LivingYes.org). Â I recommend you visit the webpage and pick up a copy.As to your own perception: Â You seem okay being who you are, and your girlfriend agrees. Â Instead, you appear to be upset by your own guess at what others may be thinking. That's a trap that stresses a lot of folks out. Â Consider this: Â Many happy people don't mind what others think of them. Â And consider this: Â Many heroic characters in literature and movies are unlikeable. Â ('Colombo' is annoying and bothersome, but we love him. Â So is Johnny's Depp's Jack Sparrow and many of the roles played by George Clooney, Sandra Bullock, and Jack Nicholson.) Â Would it be okay with you to be an 'antihero' in your own life? Â If you don't want to be an antihero, you have the power to be the person you want. Â Your behaviors and thoughts are completely under your control. Â What other people think of you is not under your control. Â You are completely in the driver's seat here. Â The choices are all yours. Â Enjoy who you are, and use your will power to make yourself who you want to be!","I'm glad to hear you have friends and that your friends say they like you.Trust your own sense of who you are which tells you that something feels uneasy within yourself.Is the friend who says you're 'just fine', very familiar with who you are?'Friend' is a broad category.She may not know you as fully as you know yourself.Basically, it is possible to be 'fine' and have some inner stress.Follow your own thoughts and observations to more fully learn about yourself in ways your friend may not notice or be aware.","'Where you put your attention is where you will go'. I forget who said this first, but it's very powerful. If all you think about and talk about is how annoying you think you might be, that will get annoying. Your intense self reflection is lovely; it will help you monitor yourself so that you're not affecting others negatively, but your alarm is going off too easily here and you risk having the opposite effect.You don't have to be perfect. She's with you, so she probably likes you as you are. She seems to put far less emphasis on your possibly annoying traits. We all have faults and if that's what we focus on, that's all we will see. My hunch is that your most annoying trait might be your negative self-talk. How ironic is that?There's another irony here...your goal is to be a better partner...but when you are self-critical, your focus is on you, not her. Every moment that fear grabs ahold of you is a moment that you're not being present in the actual relationship; you're gazing at your imagined faults. Fear steals your ability to focus on your loving partner.Â Maybe take a moment to image how she sees you...all of you. Put yourself in her shoes to see the entire you...how are you loving...thoughtful...a good partner? Confidence is a very attractive quality!","I think you have identified something important here. It's not unusual to experience feelings that don't seem to match up with what your rational mind recognizes.Â In this case, it sounds like a part of you recognizes that the people around you do not find you 'annoying and bothersome.' Despite knowing that people like you, it seems that there's still a part of you that feels like you're a bother.Finding a local counselor who can work with you to process those feelings might be just the help you need."]
+    },
+    {
+    "tag":"Am I going to be alone forever?",
+        "patterns":["I feel like I'm trying to convince myself that I'm okay when I'm not. I'm always blocking out the bad things and forgetting. I also feel like nobody cares for me and they never will. I feel truly alone."],
+        "responses":["I can relate! When things are going badly, I feel like my life has always been and will always be that way. (But I also do this when things are going well. That is, I forget how good things can turn bad. Personally, to avoid this emotional roller-coaster, I try and heed the famous advice by author and feminist Rita Mae Brown: 'One of the keys to happiness is a bad memory.'So maybe this weakness of your for forgetting is really a strength! It sounds a lot like living in the moment to me. ","I'm glad you're aware of how you honestly feel. Â Knowing one's personal truth is always the first step in finding what is necessary to be and develop.Reflect a little more on the type of care you'd like in your life.'Care' means anything from checking in on someone to deep, intimate connection between two people.Knowing your own definition of 'care' is the first step to know what is necessary for you to recognize what you'd like attracting.It is much easier to attract what we'd like if we are clear on what this is.","As social creatures, we humans all long for deep human connection. To know that we belong and are part of something larger. It is so important to us that when we feel alone - it can feel almost unbearable. You are not alone in feeling alone. While it can take time to build deep relationships there are moments in each day where we have the opportunity to interact with other people who may also feel lonely and scared and want to be seen and acknowledged. I wonder what it might be like for you if you took on an experiment of trying to really see the people around you and make little attempts to acknowledge and connect with them - fellow humans on this journey of life."]
+    },
+    {
+    "tag":"Am I unworthy of being in a meaningful relationship?",
+        "patterns":["I'm in a relationship, but I feel like I'm always putting more into it and not getting reciprocated"," My ex told me that I will never find anyone else, and that's lingering in the back of my mind."],
+        "responses":["o be worthy of you, your patner must see your worth. Often though before anyone else can see your worth, you have to believe it."]
+    },
+    {
+    "tag":"PTSD",
+        "patterns":["I have PTSD from childhood events and other traumas as an adult."," I have panic attacks, nightmares, anger, and at times depression."," I feel like I'm always on the edge or just apathetic. Can I fix this by myself?"],
+        "responses":["When it comes to trauma, especially in the event that it has caused you to develop PTSD, there can be a lot of difficulty in attempting to resolve these issues on your own simply because of how strong your urge to avoid it whenever thoughts of the traumatic experience come up. PTSD is best treated with the help of a mental health professional and if using the Cognitive Processing Approach can be treated in as few as 17 weeks. As for your other concerns, many of these can be treated independently if you have the motivation to manage your way through. Panic attacks and depression, specifically, often respond well to self-help treatment manuals. The Centre for Clinical Interventions is a great online resource for workbooks to help you learn to manage the depression and panic attacks. Whether you decide to work through these concerns on your own or in professional therapy, just know that your panic attacks must be managed prior to addressing your trauma. Hope this is helpful and if you have any other questions don't hesitate to ask.","I will not say that you can't but I will say it will be much harder and the time may take much longer. Getting help and having someone to be there with you through the ups and down of PTSD makes the journey much easier."]
+    },
+    {
+    "tag":"Can i learn to be happy alone?",
+        "patterns":[". I feel alone and that i have no one.    How can I overcome this pain and learn to be happy alone?"],
+        "responses":["I'm so sorry you're feeling like things will never get better. Try to remember that whatever illness you are dealing with, you are not the only person to have dealt with it and you are not alone! Out there, just waiting for you, is a group of people that will totally understand what you're going through and will be able to share how they coped. "]
+    },
+    {
+     "tag":" many issues",
+        "patterns":["I have so many issues to address."],
+        "responses":["Let me start by saying there are never too many concerns that you can bring into counselling. In fact, most people who come to see me for counselling have more than one issue they would like to work on in psychotherapy and most times these are all interconnected. In counselling, we work together, collaboratively, to figure out which issues you would like to address first and then together we develop an individualized plan of care. "]  
+    },
+    {
+     "tag":"social anxiety",
+        "patterns":["When I go to school, I feel like everyone is judging me, even my friends. I get overwhelmed which these thoughts and sometimes cannot get out of what I call a deep hole of thoughts. I barely go to any of our school dances because of all of the people. Not even when I am completely alone do these thoughts go away. I still feel like people can see me and are judging me."],
+        "responses":["It sounds like a couple of things are going on here; you are noticing yourself feeling judged by the people around you and that you are avoiding social activities and in addition to this you have intrusive thoughts that you are being judged, even when alone. It sounds like these thoughts are pretty distressing and you are wondering what is happening to you. Many people who come to therapy experience intrusive and distressing thoughts of various kinds, which often influence their behavior in ways that they may not like, such as leading them to isolate. In therapy, you may be able to gain insight into the nature of your distress as well as learn ways to cope and eventually alleviate this distress so that you can have satisfaction and security in your life and relationships."]
+    },
+    {
+    "tag":"deal depression",
+        "patterns":["I know I need to deal with my depression.","But I don't know how to deal with depression "," How can I deal with depression without telling anyone?"],
+        "responses":["Hello,It is completely understandable that you would not want people to know about your depression. I would first like commend you for realizing that you need to help with your depression by reaching out here. That is a great start, and you've taken the very first courageous step.Â Depression can feel debilitating and overwhelming. Depression is also a very personal thing and no one has know but you and the therapist. The best way to begin learningand dealing is to pick up the phone and call a therapist or email a therapist and schedule a session.Â The great news is that with professional help you can feel better and you will learn how deal with and manage the depression. There are many ways to help with depression that a therapist can teach you and help guide. You do not have do this alone. Asking for help and going to therapy is a strength! This can be done in a private and confidential setting.Depression should be treated by a therapist, in a safe, confidential office setting. The therapist can then discuss your depression with you in more detail to figure out the underlying cause, how long you've been feeling this way and identify what brings on these feelings.Â There is hope and depression can be treated with great success, you CAN feel good again. Depression can be managed appropriately by seeing a licensed therapist. Often times therapy will offer relief because you would have someone there simply to listen to you, validate your feelings and listen to your story. The therapist will be able to offer professional insight and perspective on the situation and help you think outside the box.Â The therapist can do many things with you, provide insight and offer many ideas to help you learn new coping skills and ideas of things you enjoy, encouraging you to re engage in hobbies you once enjoyed or even discover new things you may enjoy. There are creative ways to learn to cope too!Your therapist will also be there to support you, without judgement, at your pace, through the entire process. But the first step is finding a therapist and beginning to identify the cause your depression. Healing is possible and getting your happiness back is also possible.","It can be really tough to tell someone - anyone - that you're feeling depressed. But finding that supportive person that you can share with is a big part of the battle with depression. Depression thrives on being secret, it seems to grow the more we isolate ourselves and hide it away so I'm with Laura Cassidy, when she suggests finding that professional support person so you can start fighting back against your depression. If that feels like too big a step right now, maybe check out a book or two... I'm a big fan of a book called 'Feeling Good' by Dr. David Burns if you want some practical thoughts on tackling depression and on 'Radical Acceptance' by Tara Brach if you prefer something a little more spiritual.","Love yourself more and treat yourself kindly, with empathy and compassion.Usually when people feel depressed they also feel lonely and isolated. Â Since at this time you wouldn't want to tell anyone about the way you feel, which includes the possibility that a few of the ones whom you tell would offer you emotional support, give this to yourself.Also consider to make a goal of eventually telling someone whom you are reasonably sure would understand and empathize, about your depression.This will help alleviate the sense of shame, unworthiness and pervasive guilt which often comes along with depression.Sending you good luck!"]
+    },
+    {
+    "tag":"deal with a break up",
+        "patterns":["My fiancee and I broke up. He cheated on me numerous times. I kept forgiving but questioning his every move. He got tired and left.","My girl-friend and I broke up. ","My boyfriend and I broke up. ","I am heart broken"],
+        "responses":["It takes time to heal your pain. You are not a robot that can just switch off your emotions.Â  Please surround yourself with people who can support and empower you.","There is a grieving process after losing a relationship (or any other major loss, such as a job, a house, etc.). One of the things to consider is give yourself a chance to go through the tasks of mourning:To accept the reality of the lossTo process the pain of griefTo adjust to a world without the person who has just leftTo find an enduring connection with that person in the midst of embarking on a new life. This could mean a lot of things, but it could be holding certain memories as your own.You may also find things that make you feel happy or comfortable. It's also helpful to have people who you can talk to about your feelings and people who may be able to recognize things about you that you cannot see right now (such as how you are honest, committed to your work, a good listener, etc.).This takes some time. Try to be gentle with yourself."]
+    },
+    {
+    "tag": "definition",
+        "patterns": ["What does it mean to have a mental illness?", "What is mental health illness","Describe mental health illness"],
+        "responses": ["Mental illnesses are health conditions that disrupt a person's thoughts, emotions, relationships, and daily functioning."],
+        "context": [""]
+    },
+
+	{"tag": "affects_whom",     
+	 "patterns": ["Who does mental illness affect?", "Who is affected by mentall illness"],        
+	 "responses": ["It is estimated that mental illness affects 1 in 5 adults in America, and that 1 in 24 adults have a serious mental illness."],       
+ 	 "context": [""]    
+	},
+        {"tag": "what_causes",         
+	 "patterns": ["What causes mental illness?","What leads to mental illness?","how does one get mentally ill?"],         
+	 "responses": ["Symptoms of mental health disorders vary depending on the type and severity of the condition."],       
+	 "context": [""]        
+	},
+	
+       {"tag": "recover",        
+	 "patterns": ["Can people with mental illness recover?","Is it possible to recover from mental illness"],        
+	 "responses": ["When healing from mental illness, early identification and treatment are of vital importance. Based on the nature of the illness, there are a range of effective treatments available. For any type of treatment, it is essential that the person affected is proactive and fully engaged in their own recovery process. Many people with mental illnesses who are diagnosed and treated respond well, although some might experience a return of symptoms. Even in such cases, with careful monitoring and management of the disorder, it is still quite possible to live a fulfilled and productive life."],       
+	 "context": [""]        
+	},
+	{"tag": "steps",       
+	 "patterns": ["I know someone who appears to have such symptoms?","What are the steps to be followed incase of symptoms"],        
+	 "responses": ["Although this website cannot substitute for professional advice, we encourage those with symptoms to talk to their friends and family members and seek the counsel of a mental health professional. The sooner the mental health condition is identified and treated, the sooner they can get on the path to recovery.If you know someone who is having problems, don't assume that the issue will resolve itself. Let them know that you care about them, and that there are treatment options available that will help them heal. Speak with a mental health professional or counselor if you think your friend or family member is experiencing the symptoms of a mental health condition. If the affected loved one knows that you support them, they will be more likely to seek out help."],        
+	 "context": [""]       
+	},	
+	{"tag": "find_help",
+	 "patterns": ["How to find mental health professional for myself","How to find mental health professional?"],
+	 "responses": ["Feeling comfortable with the professional you or your child is working with is critical to the success of the treatment. Finding the professional who best fits your needs may require research. Start by searching for providers in your area."],
+	 "context": [""]
+	},
+	{"tag": "treatement_options",
+	 "patterns": ["What treatment options are available?","How can one recover?"],
+	 "responses": ["Just as there are different types of medications for physical illness, different treatment options are available for individuals with mental illness. Treatment works differently for different people. It is important to find what works best for you or your child."],
+	 "context": [""]
+	},
+	{"tag": "treatment_tips",
+	 "patterns": ["How to become involved in treatment?","What should I keep in mind if I begin treatment?"],
+	 "responses":["Since beginning treatment is a big step for individuals and families, it can be very overwhelming."],
+	 "context": [""]
+	},
+	{"tag": "professional_types",
+	 "patterns": ["What is the difference between mental health professionals?","What are the different types of mental health professionals present?"],
+	 "responses":["There are many types of mental health professionals. The variety of providers and their services may be confusing. Each have various levels of education, training, and may have different areas of expertise. Finding the professional who best fits your needs may require some research."],
+	 "context": [""]
+	},
+	{"tag": "right_professional",
+	 "patterns": ["How can I find a mental health professional right myself?","How to find the right mental health professional?"],
+	 "responses":["Feeling comfortable with the professional you or your child is working with is critical to the success of your treatment. Finding the professional who best fits your needs may require some research."],
+	 "context": [""]
+	},
+    {
+    "tag":"better",
+    "patterns":["If I feel better after taking medication, does this mean I am 'cured' and can stop taking it?"],
+    "responses":["It is not uncommon for people to stop taking their medication when they feel their symptoms are under control. Others may choose to stop taking their medication because of its side effects, without realizing that most side effects can be effectively managed. While it may seem reasonable to stop taking the medication, the problem is that most often, the symptoms will return. If you or your child is taking medication, it is very important that you work together with your doctor before making decisions about any changes in your treatment.\nAnother problem with stopping medication, particularly for stopping it abruptly, is that you may develop withdrawal symptoms that can be very unpleasant. If you and your doctor feel a trial off your medicine is a good idea, it is necessary to slowly decrease the dosage of medications so that these symptoms donâ€™t occur.\nIt is important that your doctor and pharmacist work together to make sure your medications are working safely and effectively. You should talk with them about how you are doing and if there are side effects that make you unwilling to continue treatment. They will work with you to develop strategies for minimizing these side effects, or will create a plan for switching to a different treatment that will be a better fit."]
+    },
+    {
+    "tag":"therapy",
+    "patterns":["Where can I go to find therapy"],
+    "responses":["Strathmore University have an office that offers medical assistance to the students. You can visit us .Here is a link to our website https://strathmore.edu/mental-health/ or reach us at 0724255169"]
+    },
+    {
+    "tag":"deal with someone telling ",
+    "patterns":["How do I deal with someone telling me what to do?"],
+    "responses":["Some people may advise you on good evidence of what works with the best of intentions, but it's important to find out what works best for you."]
+    },
+    {
+    "tag":"self-help materials",
+    "patterns":["Where can I find self-help materials for depression?"],
+    "responses":["Self-help resources are not a substitute for diagnosis or treatment. If you have concerns about low mood, itâ€™s best to talk to your doctor first and rule out physical causes for your symptoms. However, once youâ€™ve checked in with your doctor, self-help materials can be a great way to learn more about depression and practice different skills at your own pace or in between treatment sessions. Here are some resources to check out. The Antidepressant Skills Workbook was created by two BC psychologists. You'll learn more about depression, learn and practice different skills to help improve your mood, and learn how healthy changes in other parts of your life can impact your mood. They also have similar workbooks for specific groups: Dealing With Depression: Antidepressant Skills for Teens A workbook for people who experience problems with depression at work called Antidepressant Skills at Work: Dealing with Mood Problems in the Workplace A workbook for expecting or new moms called Managing Depression: A Self-help Skills Resource for Women Living With Depression During Pregnancy, After Delivery and Beyond A workbook for people who experience health problems called Positive Coping with Health Conditions: A Self-Care Workbook On the HeretoHelp site, our Managing Depression series offers three info sheets: Dealing with a Diagnosis of Depression, Working With Your Doctor for Depression, and Preventing Relapse of Depression. The series helps you be an active partner in your health care, build healthy coping skills and self-management strategies and more. Often depression can affect your concentration and motivation to work through self-help materials on your own. If youâ€™d like self-help materials with a bit of extra support from a person, Bounce Back: Reclaim Your Health is a guided self-help program for British Columbians who experience mild to moderate depression, low mood, stress, or anxiety. You can get a DVD of tips to help you recognize and manage symptoms of depression, or you can learn more in-depth skills in a series of workbooks you complete at home. You also work with a trained coach from the Canadian Mental Health Association who will offer support and advice by telephone or video conference. Bounce Back is free with a doctorâ€™s referral. For more information, visit www.bouncebackbc.ca (If you want to access the Bounce Back materials without a coach or referral, you can do that online in BC at www.bouncebackonline.ca). The Mood Disorders Association of BC has a number of videos on mental health, seeking help, and other topics  Kelty Mental Health Resource Centre also maintains a comprehensive list of websites, toolkits, books and other resources for young people and families Heads Up Guys offer tips and strategies for healthy living strategies for men who experience depression The BC Reproductive Mental Health Program of BC Mental Health and Substance Use Services has a self-management guide for women who experience postpartum depression called Coping with Depression in Pregnancy and Following the Birth. They also have a guide for Aboriginal women and their families called Celebrating the Circle of Life: coming back to Balance and Harmony The follow resources are based outside of BC, but they offer a lot of good information. MoodGYM Training Program is a web-based self-help course for people who experience depression. It is based in Australia but is available for free to anyone Moodjuice is a UK initiative that offers self-help workbooks, including one for depression There are many books and workbooks available to help people who experience depression. Talk to your mental health care team for recommendations. You can find many from your local bookstore or special bookstores specializing in mental health like Odin Books in Vancouver (you can also order online). Within British Columbia, you may also borrow books for free from the Family Support and Resource Centre at BC Childrenâ€™s and Womenâ€™s Hospitals. They have many self-help and reference materials on depression for women and their partners, for parents, and for children and youth."]
+    },
+    {
+    "tag":"alcohol",
+        "patterns":["How can I find help for an alcohol or drug use problem?"],
+        "responses":["Seeking to make changes in the way you use substances like alcohol or other drugs? This can be an important step! Some people are able to reduce their substance use or quit altogether on their own or with self-help materials. But most of us need support from other peopleâ€”family members, friends, health professionals, or other people struggling with substance use problems. The right help for you depends on many factors. These include the type of drug you are using, how much and how often, your health and social situation and, of course, your own preferences. Getting help doesn't mean giving up control of shaping your own path. You are still the one who makes the final decisions about the type and degree of change you make. "]
+    },
+    {
+    "tag":"drinking",
+    "patterns":["How do I know if I'm drinking too much?"],
+    "responses":["Sorting out if you are drinking too much can be complicated. You are unique and your relationship with alcohol is unique. No one has the same combination of life experiences and influences that you do. So even though you and your friend may choose to drink, how and why you use alcohol may be different. Those of us who drink, seek benefits from alcohol, not difficulties. But sometimes we start using more, and more often, than makes sense. As a general rule, drinking alcohol becomes a problem when it negatively affects our life or the lives of others. Many people imagine this refers to people who consume alcohol all day every day. But even drinking too much on a single occasion can lead to a problem, for instance making a poor decision such as driving while impaired. "]
+    },
+    {
+    "tag":"Dissorder",
+    "patterns":["What is obsessive-compulsive personality disorder?"],
+    "responses":["A personality disorder is a pattern of thoughts, feelings, and behaviours that last for a long time and causes some sort of problem or distress. Obsessive-compulsive personality disorder or OCPD is about control. People with OCPD have very inflexible thinking and expect everything to be ordered, perfect, and done their 'correct' way. This happens at the expense of other important things in life, including relationships with others. Work can take priority over every other part of life, too, and people with OCPD may seem excessively dedicated, but may be unable to complete tasks due to perfectionism. They may struggle to delegate and may distrust other people's contributions. People with OCPD may not tolerate uncertainty and may have a very rigid understanding of the world something is either right or wrong. They may also have a hard time spending money on themselves or others, and they may experience hoarding, the inability to throw away items from their homes. The conflict between the desire for neatness or order and the inability to throw things out may cause a lot of anxiety. While obsessive-compulsive personality disorder and obsessive-compulsive disorder (OCD) have a similar name, they are not the same illness. People with obsessive-compulsive disorder usually understand that their obsessions and compulsions are illogical and usually experience a lot of distress, even though they may not be able to stop obsessions or compulsions. Compulsions are an attempt to reduce anxiety, not to find pleasure. People with obsessive-compulsive personality disorder may view their thoughts as part of who they are, see their thoughts as logical, and may find pleasure or benefit in completing compulsive tasks. They may experience a lot of distress when they can't achieve control or the perfectionism they want. Obsessive-compulsive personality disorder is one of the most common personality disorders. Treatment may include some combination of psychotherapy, medication, and self-help strategies. To find help for OCPD, talk to your family doctor, find a psychologist through the BC Psychological Association, or call 811 to talk to a HealthLink BC navigator."]
+    },
+    {
+      "tag":"Personality Dissorder",
+      "patterns":["What is antisocial personality disorder?"],
+      "responses":["A personality disorder is a pattern of thoughts, feelings, and behaviours that last for a long time and causes some sort of problem or distress. Antisocial personality disorder or ASPD affects the way people think about the rights of others. Someone with ASPD may disregard laws or expectations, lack remorse when they hurt others or break the law, make reckless decisions, and believe they are superior to others. People may see someone with ASPD as overly dramatic, impulsive, manipulative, and deceitful. Some people may appear charming, at least on the surface. Like all mental illnesses, antisocial personality disorder is a spectrum. Some people may only occasionally act out, while others may break the law often and spend a lot of time in the criminal justice system. ASPD is only diagnosed in adults, but people with ASPD start to have problems with conduct or antisocial behaviours at a young age. They may be diagnosed with conduct disorder during childhood. Treatment for antisocial personality disorder, usually psychotherapy, can help reduce the harms of ASPD and help people build empathy towards others. ASPD is treatable and it may improve as a person approaches middle age. All of us have hurt someone else or acted without thinking of others' needed. It's important to remember that antisocial personality disorder is an enduring pattern around lack of empathy and lack of remorse. Only a doctor or mental health professional can diagnose illnesses like ASPD. To find help for antisocial personality disorder, talk to your family doctor, find a psychologist through the BC Psychological Association, or call 811 to talk to a HealthLink BC navigator."]  
+    },
+    {
+    "tag":"physical health?",
+    "patterns":["How can I take care of my physical health?"],
+    "responses":["When you stock up on groceries, don't ignore fresh fruit and vegetables we still have everything we need to prepare food. Now that we're advised to limit the amount of time we spend in public spaces like grocery stores, this is a great time to try out new fruits and vegetables that keep at home for longer periods of time. If it's safer for you to stay home or you are in self-isolation, reach out for help. Many grocery stores and meal prep services offer safe, no-contact delivery. You can also ask family or friends to bring you groceries, or look for local COVID-19 support groups on social media. It's safest if others leave food and other supplies outside of your door to avoid spreading the virus. "]
+    },
+    {
+    "tag":"positive and negative symptoms",
+    "patterns":["What are positive and negative symptoms?"],
+    "responses":["Positive and negative symptoms are medical terms for two groups of symptoms in schizophrenia. Positive symptoms add. Positive symptoms include hallucinations (sensations that aren't real), delusions (beliefs that can't be real), and repetitive movements that are hard to control. Negative symptoms take away. Negative symptoms include the inability to show emotions, apathy, difficulties talking, and withdrawing from social situations and relationships. There is also a third group of symptoms, usually called cognitive symptoms. This includes anything related to thinking, such as disorganized thoughts, memory problems, and difficulties with focus and attention."]
+    },
+    {
+     "tag":"diagnosed with depression",
+     "patterns":["Someone I love has been diagnosed with depression. How can I help?"],
+     "responses":["We naturally want to help a loved one who isn't feeling well. How we can or should help may seem fairly obvious when a loved one experiences a physical health problem, but many people say they're not sure how to best help when a loved one experiences a mental illness like depression. Here are some tips: You don't have to understand exactly what someone else is experiencing, you just need to recognize that it's a difficult experience. You can try something like, I can see that this experience or these symptoms are really painful for you,or, I'm sorry to hear that you're feeling unwell.â€ If you have experienced depression yourself, you might say, I know how you feel. Just remember that everyone experiences illnesses like depression differently, and empathy is about recognizing the impact of the illness, not comparing symptoms. You don't have to be an expert, but learning more about depression can help you understand what's going on (and maybe dispel some of the unhelpful myths around depression). Our Depression info sheet is a great place to start, and we have a list of resources at Q&A: Where can I learn more about depression? Sometimes talking about problems or concerns can really help in fact, many people who experience a mood disorder say that they just want to be heard. It's important to understand that talking about something difficult like experiences of depression can be very hard for your loved one. You cannot force them to talk about it, but you can invite them to, and create safe and quiet spaces to talk. If a loved one opens up to you, listen actively  that is, without distractions like your phone or the TV. Really pay attention to what they have to say. Listen with empathy and without judgement. Even if you don't understand the problem or see the problem in a different way, your main concern is the distress or difficult feelings your loved one is experiencing. You can find in-depth tips on listening and communicating well in Module Three of the Family Toolkit. Some people are not ready to talk about everything at once, or at all. That's okay! Respect your loved one's boundaries and let them tell you what they're ready to talk about. Even when you have the best intentions, unsolicited advice can be unhelpful. You likely can't fix the problem, and you may not know the whole story. If you'd like to share what worked for you in a similar situation, you can ask if the other person would like to talk about strategies that worked for you. Different people need different things don't assume you know what's best! Some people need emotional help, like someone they can talk with. Other people may have a good relationship with a counsellor or other professional, but they might need practical help, like help around the house or help sticking to their treatment plan. And others may simply want to be included in some social events. By asking what a person needs, you may also be less tempted to give advice. When people experience an episode of depression, they can have a lot of very negative thoughts and feelings. This can take a real toll on others. Itâ€™s a good idea to seek support for yourself there are support groups just for family members and friends. The BC Schizophrenia Society has a directory of family support groups around BC for any mental illness. "]   
+    }
+    ]
+}
